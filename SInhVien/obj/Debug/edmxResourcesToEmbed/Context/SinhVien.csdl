@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SinhVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ThongTin">
+    <Key>
+      <PropertyRef Name="MaSv" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaSv" Type="Int32" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NamSinh" Type="DateTime" Precision="3" />
+    <Property Name="SoDienThoaiSV" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Lop" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Khoa" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="HoTenChuTro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChiNoiCuTru" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NgayDangKy" Type="DateTime" Precision="3" />
+    <Property Name="NgayHuy" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="SinhVienEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <EntitySet Name="ThongTins" EntityType="Self.ThongTin" />
+  </EntityContainer>
+</Schema>

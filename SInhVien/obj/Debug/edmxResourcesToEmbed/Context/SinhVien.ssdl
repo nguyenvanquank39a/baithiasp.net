@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SinhVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="varchar" MaxLength="50" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ThongTin">
+    <Key>
+      <PropertyRef Name="MaSv" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSv" Type="int" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" />
+    <Property Name="NamSinh" Type="datetime" />
+    <Property Name="SoDienThoaiSV" Type="char" MaxLength="11" />
+    <Property Name="Lop" Type="nvarchar" MaxLength="70" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="70" />
+    <Property Name="HoTenChuTro" Type="nvarchar" MaxLength="100" />
+    <Property Name="DiaChiNoiCuTru" Type="nvarchar" MaxLength="100" />
+    <Property Name="NgayDangKy" Type="datetime" />
+    <Property Name="NgayHuy" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="SinhVienModelStoreContainer">
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongTin" EntityType="Self.ThongTin" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

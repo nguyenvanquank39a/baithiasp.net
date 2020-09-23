@@ -1,0 +1,98 @@
+﻿@model SInhVien.Context.ThongTin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ThongTin</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NamSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoaiSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoaiSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTenChuTro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTenChuTro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChiNoiCuTru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChiNoiCuTru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDangKy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDangKy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHuy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHuy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSv }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
